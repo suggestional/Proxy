@@ -67,3 +67,23 @@
 ![connected](src/connected.jpg)
 
 ![not connected](src/not_connected.jpg)
+
+
+
+#### IOS / iPad OS
+
+可以通过外区的苹果账号下载收费代理软件 `Shadowrocket` 或 `Quantumult`。但是我没有办法付美刀 qwq，所以我选择了免费的 `Potatso Lite`。
+
+下载完成后打开，看到主界面。点击右上角的加号，选择手动导入，并进行配置，只需要填写 Host，Port，Encryption，Password 即可，不需要修改其他项目。
+
+![main](src/potatso_main.jpg)
+
+![manual input](src/potatso_manual_input.jpg)
+
+![add](src/potatso_add.jpg)
+
+完成配置后，回到主界面，点击右下角的启动符号，即可启动代理服务。
+
+进入浏览器，查询自己的 IP 地址，如为服务器地址，则为配置成功。
+
+![connected](src/potatso_connected.jpg)
