@@ -2,7 +2,7 @@
 
 ### 服务器端配置（Linux Ubuntu）
 
-首先需要一台服务器，这里使用的是腾讯云的服务器，假定服务器 ip 地址为：121.5.255.7（事实上并不是）
+首先需要一台服务器（关于如何获取服务器或 VPS 的方法在最下方），这里使用的是腾讯云的服务器，假定服务器 ip 地址为：121.5.255.7（事实上并不是）
 
 首先通过 ssh 远程登陆服务器：在命令行输入 `ssh username@serverIP`，将 `username` 替换为服务器的登陆用户名，通常是 `root`，根据不同的服务商会有所不同；`serverIP` 就是服务器的公网 IP，此处就是 `121.5.255.7`。所以实际上输入的指令为：`ssh root@121.5.255.7`。
 
@@ -87,3 +87,33 @@
 进入浏览器，查询自己的 IP 地址，如为服务器地址，则为配置成功。
 
 ![connected](src/potatso_connected.jpg)
+
+
+
+### 可直连的海外 VPS 获取
+
+ `VPS` 定义（抄自百度百科）：VPS（Virtual Private Server 虚拟专用服务器）技术，将一台服务器分割成多个虚拟专享服务器的优质服务。
+
+所以 VPS 说到底还是个服务器……
+
+一般搭建代理的服务器配置不需要非常高，买最低配最便宜的就可以了，这里提供一个搬瓦工的 VPS [购买链接](https://bwh81.net/aff.php?aff=044&pid=57)，有兴趣的同学也可以去[这个链接](https://www.bandwagonhost.net/4518.html)上了解更多关于配置和价格的问题。
+
+进入购买链接后的界面如图所示。
+
+![purchase](src/bwh_purchase.jpg)
+
+最下方有 `Add to Cart` 按钮，点击即可。
+
+进入确认订单的界面，注意在这里可以填写一个优惠码（Promotional Code），目前折扣力度最大的优惠码是 `BWH3HYATVBJW`，填写后点击 `Validate Code`，即可看到 6.58% 的折扣，如图所示。
+
+![code](src/bwh_code.jpg)
+
+继续点击右下角 `checkout` 即可进入支付环节。此处会要求填写个人信息，如实填写即可（太过虚假的信息容易被人工审查）。支付方式选择 Alipay，同意协议，并点击 `Complete Order`，会生成一个未支付的订单。支付完成后返回会自动跳转到控制面板，如果无法成功跳转，可以访问[这个链接](http://bandwagonhost.com/clientarea.php?action=products)，选择刚才购买的 VPS 进行管理，点击最下方 `Login to KiwiVM Control Panel` 进入管理面板，如图所示。
+
+![panel](src/bwh_panel.jpg)
+
+如果显示的操作系统不是 `Ubuntu`，可以在左侧选择 `Install new OS` 重装系统，root 密码也可以在左侧重置获取。
+
+完成后打开命令行窗口，通过 ssh 远程登陆服务器就可以使用了。如果服务器的 `SSH Port` 不是 22，需要在 ssh 指令中设置 `-p` 参数，指定端口。
+
+`ssh -p port root@serverIP`
