@@ -90,7 +90,25 @@
 
 
 
-### MacOS
+#### Android
+
+下载 [Shadowsocks for Android](https://cdn.cuihanbing.com/app/ladder/shadowsocks-5.2.1.apk)，安装后打开，可以看到如图所示界面。
+
+![android index](src/android_index.jpg)
+
+点击铅笔图标进行修改，如图所示。
+
+![android modify](src/android_modify.jpg)
+
+点击右上角小勾进行保存，回到主界面，点击下方小飞机按钮启动。
+
+检查 IP 地址，如图所示。
+
+![android connected](src/android_connected.jpg)
+
+
+
+#### MacOS
 
 MacOS 上使用的是[ClashX](src/clashX.dmg)，安装后状态栏会出现 `clashX` 的小猫图标，右键图标，打开菜单栏，如图所示。
 
