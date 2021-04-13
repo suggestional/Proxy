@@ -90,6 +90,37 @@
 
 
 
+### MacOS
+
+MacOS 上使用的是[ClashX](src/clashX.dmg)，安装后状态栏会出现 `clashX` 的小猫图标，右键图标，打开菜单栏，如图所示。
+
+![clashX menu](src/clashX_menu.jpg)
+
+选择`配置` > `打开本地配置文件夹` > `config.yaml`，打开文件后如图所示。
+
+![clashX config](src/clashX_config.jpg)
+
+在 `Proxy:` 下方，`Proxy Group:` 上方，插入以下内容。
+
+```
+  - name: "server"
+  type: ss
+  server: <serverip>
+  port: <port>
+  password: "<password>"
+  cipher: rc4-md5
+```
+
+用服务器的 IP 地址、端口和密码替换 `<serverip>`、`<port>` 和 `<password>` 即可，注意 `name` 前面的中划线，以及 `name` 和 `password` 字段需要用双引号。
+
+保存退出，重新启动 `ClashX`，再次打开菜单栏，就可以看到多了 `GLOBAL` 选项，如图所示。
+
+![clashX connect](src/clashX_connect.jpg)
+
+在此处选择刚刚配置好的 `server`，并将上方的`出站模式`改为全局模式，即可完成配置。查询 IP 地址的方式同上，不再演示。
+
+
+
 ### 可直连的海外 VPS 获取
 
  `VPS` 定义（抄自百度百科）：VPS（Virtual Private Server 虚拟专用服务器）技术，将一台服务器分割成多个虚拟专享服务器的优质服务。
